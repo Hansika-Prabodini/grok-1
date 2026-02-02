@@ -605,7 +605,7 @@ class RMSNorm(hk.RMSNorm):
                 "scale",
                 param_shape,
                 dtype=jnp.float32,
-                init=hk.initializers.Constant(0),
+                init=hk.initializers.Constant(1),
             )
             if self.sharding:
                 scale = with_sharding_constraint(scale, self.sharding)
