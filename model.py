@@ -701,7 +701,7 @@ class MultiHeadAttention(hk.Module):
         with_bias: bool = True,
         value_size: Optional[int] = None,
         model_size: Optional[int] = None,
-        attn_output_multiplier: 1.0,
+        attn_output_multiplier: float = 1.0,
         data_axis: Union[str, Tuple[str, ...]] = "data",
         model_axis: Union[str, Tuple[str, ...]] = "model",
         name: Optional[str] = None,
