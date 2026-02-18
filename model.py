@@ -397,7 +397,7 @@ class MoELayer(hk.Module):
         return out
 
     def __call__(self, inputs: jax.Array, padding_mask: jax.Array):
-        return self._inference_call(inputs)
+        return self._inference_call(inputs, padding_mask)
 
 
 class MHAOutput(NamedTuple):
